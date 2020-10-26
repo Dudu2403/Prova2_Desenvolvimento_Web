@@ -6,16 +6,16 @@
 
     <div>
       <span>
-        Tecnológica: <b>60% </b>
+        Tecnológica: <b>60%</b>
       </span>
 
       <span>
-        Humanas: <b>30% </b>
+        Humanas: <b>30%</b>
       </span>
 
       <span>
-        Médica: <b>10% </b>
-      </span>
+        Médica: <b>10%</b>
+      </span><br/><br/>
     </div>   
 
     </fieldset><br/><br/>
@@ -36,6 +36,10 @@
       <a :href="url" target="_blank">Visualizar Projetos</a>
       <!-- {{ projects }} -->
     </div>
+
+    <tr v-for="project of projects" :key="project.id">
+      <td>{{ project.nome }}</td>
+    </tr>
   </div>
 </template>
 
@@ -86,11 +90,12 @@ export default {
 }
 
 b {
-  font-size: 38px;
+  font-size: 35px;
 }
 
 span {
   background-color: #F8F8FF;
+  padding: 25px 10px;
   font-size: 14px;
 }
 
